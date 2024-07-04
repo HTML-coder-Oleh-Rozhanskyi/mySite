@@ -58,6 +58,13 @@ module.exports = {
 				}
 			},
 			{
+				test: /\.swiper-bundle.js$/i,
+				type: 'asset/resource',
+				generator: {
+					filename: '[name][ext]'
+				}
+			},
+			{
 				test: /\.(?:js|mjs|cjs)$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {

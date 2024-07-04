@@ -1,5 +1,4 @@
 function aside() {
-	const aside = document.querySelector('.aside-menu');
 
 	window.addEventListener('scroll', () => {
 		let scrollDistance = window.scrollY;
@@ -15,6 +14,8 @@ function aside() {
 		})
 	});
 };
+
 aside();
+
 
 

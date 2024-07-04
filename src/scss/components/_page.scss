@@ -2,7 +2,7 @@
 	@include title;
 	font-family: var(--font-family);
 	line-height: 1.12;
-	font-size: clamp(var(--32), vwm(64px), 64px);
+	font-size: clamp(var(--32), vwm(54px), 54px);
 	font-weight: 400;
 	text-transform: capitalize;
 	color: var(--brand-1);
@@ -13,11 +13,10 @@
 		content: "";
 		position: absolute;
 		bottom: -24px;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 0;
 		width: 100%;
-		height: 18px;
-		background: url(../img/svg/icon-line.svg) 0 0/ 100% no-repeat;
+		height: 12px;
+		background: url(../img/svg/icon-line.svg) 50% 0 no-repeat;
 	}
 }
 .tag {
@@ -74,6 +73,9 @@
 		align-items: center;
 		column-gap: 122px;
 		grid-template-columns: 328px 1fr;
+		@media (max-width: 1680px) {
+			column-gap: var(--64);
+		}
 		@media (max-width: 1420px) {
 			grid-template-columns: 1fr;
 			justify-items: center;
@@ -89,7 +91,7 @@
 		grid-column: 1/-1;
 		font-family: var(--font-family);
 		font-weight: 400;
-		font-size: clamp(90px, vwc(117px), 117px);
+		font-size: clamp(74px, vwc(90px), 90px);
 		line-height: 1.15;
 		text-transform: capitalize;
 		color: var(--brand-2);
@@ -196,22 +198,24 @@
 		}
 		// .cv__button
 		&__button {
+			@include link;
 			align-self: flex-start;
 			display: flex;
 			align-items: center;
+			justify-content: center;
 			border-radius: 32px;
 			padding: 16px 32px;
 			width: 227px;
 			height: 58px;
-			background:
-				url(../img/svg/icon-download.svg) right 32px center no-repeat,
-				var(--white);
+			background-color: var(--white);
+			// background:
+			// 	url(../img/svg/icon-download.svg) right 32px center no-repeat,
+			// 	var(--white);
 			font-family: var(--font-family);
 			font-size: 20px;
 			line-height: 1.2;
 			text-transform: capitalize;
 			color: var(--bg-1);
-			text-align: left;
 			transition: background var(--transition);
 			&:hover {
 				@media (any-hover) {
@@ -228,7 +232,7 @@
 	// .banner__body
 	&__body {
 		display: grid;
-		grid-template-columns: 1fr 215px;
+		grid-template-columns: 1fr auto;
 		column-gap: 74px;
 		@media (max-width: 1420px) {
 			grid-template-columns: 1fr;
@@ -238,7 +242,7 @@
 	&__title {
 		@include title;
 		line-height: 1.12;
-		font-size: clamp(var(--32), vwm(64px), 64px);
+		font-size: clamp(var(--32), vwm(54px), 54px);
 		font-weight: 400;
 		text-transform: capitalize;
 		color: var(--white);
@@ -309,7 +313,6 @@
 		box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
 		background-color: var(--bg-2);
 		@media (max-width: 1023px) {
-			max-width: 215px;
 			grid-column: 1/2;
 			grid-row: 4/5;
 			justify-self: center;
@@ -324,14 +327,15 @@
 		display: flex;
 		align-items: center;
 		column-gap: 16px;
-		&:not(:last-child) {
+		white-space: nowrap;
+		s &:not(:last-child) {
 			margin-bottom: 48px;
 		}
 	}
 	// .banner__skills-number
 	&__skills-number {
 		font-weight: 500;
-		font-size: 48px;
+		font-size: 38px;
 		line-height: 1.29;
 		text-transform: capitalize;
 		color: var(--brand-1);
@@ -425,6 +429,18 @@
 			padding: 24px;
 		}
 	}
+	// .about__hello-text
+	&__hello-text {
+		font-weight: 500;
+		font-size: 28px;
+		line-height: 1.31;
+		text-transform: capitalize;
+		color: var(--brand-1);
+	}
+	// .about__mark-text
+	&__mark-text {
+		color: var(--brand-1);
+	}
 	// .about__img
 	&__img {
 		grid-column: 2/3;
@@ -515,7 +531,7 @@
 	// .skills__kard-title
 	&__kard-title {
 		@include title;
-		font-size: 24px;
+		font-size: 20px;
 		line-height: 1.33;
 		text-transform: capitalize;
 		color: var(--bg-1);
@@ -549,7 +565,7 @@
 		align-items: center;
 		row-gap: 24px;
 		font-weight: 500;
-		font-size: 32px;
+		font-size: 28px;
 		line-height: 1.31;
 		text-transform: uppercase;
 		transition: transform var(--transition);
@@ -637,7 +653,7 @@
 		text-align: center;
 		justify-self: center;
 		font-weight: 500;
-		font-size: clamp(24px, vwm(32px), 32px);
+		font-size: clamp(20px, vwm(28px), 28px);
 		line-height: 1.31;
 		text-transform: capitalize;
 		color: var(--brand-1);

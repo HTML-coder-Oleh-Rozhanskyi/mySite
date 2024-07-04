@@ -289,37 +289,31 @@
 	// .aside-menu__link--home
 	&__link--home {
 		&::before {
-			content: "Home";
+			content: "Початок";
 		}
 	}
 	// .aside-menu__link--about-me
 	&__link--about-me {
 		&::before {
-			content: "About Me";
+			content: "Про мене";
 		}
 	}
 	// .aside-menu__link--skills
 	&__link--skills {
 		&::before {
-			content: "Skills";
+			content: "Навички";
 		}
 	}
 	// .aside-menu__link--works
 	&__link--works {
 		&::before {
-			content: "Works";
-		}
-	}
-	// .aside-menu__link--blogs
-	&__link--blogs {
-		&::before {
-			content: "Blogs";
+			content: "Роботи";
 		}
 	}
 	// .aside-menu__link--contact
 	&__link--contact {
 		&::before {
-			content: "Contact";
+			content: "Контакти";
 		}
 	}
 }

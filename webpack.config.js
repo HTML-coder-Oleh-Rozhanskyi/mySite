@@ -20,7 +20,6 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		clean: true,
 		filename: 'main[contenthash].js',
-		assetModuleFilename: '[name][ext]'
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -55,13 +54,6 @@ module.exports = {
 				type: 'asset/resource',
 				generator: {
 					filename: 'fonts/[name][ext]'
-				}
-			},
-			{
-				test: /\.swiper-bundle.js$/i,
-				type: 'asset/resource',
-				generator: {
-					filename: '[name][ext]'
 				}
 			},
 			{

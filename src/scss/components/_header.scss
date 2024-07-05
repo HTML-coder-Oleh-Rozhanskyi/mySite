@@ -19,7 +19,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		column-gap: var(--64);
+		column-gap: var(--s64);
 		transition: min-height var(--transition);
 		&::before {
 			content: "";
@@ -75,7 +75,7 @@
 			justify-content: flex-start;
 			overflow-y: auto;
 			flex-direction: column;
-			row-gap: var(--32);
+			row-gap: var(--s32);
 			padding: 150px 0 30px;
 			background-color: var(--bg-1);
 			transform: translateX(100%);
@@ -87,12 +87,12 @@
 		&__list {
 			@include list;
 			display: flex;
-			column-gap: var(--32);
+			column-gap: var(--s32);
 			@include sm {
 				flex-wrap: nowrap;
 				align-items: center;
 				flex-direction: column;
-				row-gap: var(--32);
+				row-gap: var(--s32);
 			}
 		}
 		// .menu__link
@@ -131,7 +131,7 @@
 	.social-list {
 		@include list;
 		display: flex;
-		column-gap: var(--32);
+		column-gap: var(--s32);
 		@include m {
 			flex-grow: 1;
 			justify-content: flex-end;

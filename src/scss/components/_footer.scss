@@ -24,7 +24,7 @@
 	.social-list {
 		@include list;
 		display: flex;
-		column-gap: var(--32);
+		column-gap: var(--s32);
 		// .social-list__link
 		&__link {
 			@include link;
